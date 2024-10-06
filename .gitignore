@@ -1,0 +1,6 @@
+#Ignoramos la carpeta de mi entorno virtual
+env/
+
+#Ignoramos cualquier archivo cache o de configuracion
+__pycache__/
+*.pyc

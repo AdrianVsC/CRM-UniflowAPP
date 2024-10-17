@@ -4,14 +4,18 @@ from sklearn.tree import DecisionTreeRegressor
 import joblib
 
 def train_model(X_train, y_train):
+
+    '''
+    Esta función entrena y guarda el nuevo modelo cada que la BD se actualice
+    
+    '''
+
+
     model = DecisionTreeRegressor()
     model.fit(X_train, y_train)
     
     # Guardar el modelo
     joblib.dump(model, 'daily_model.pkl')
-
-def load_model():
-    return joblib.load('daily_model.pkl')
 
 
 def daily_training():

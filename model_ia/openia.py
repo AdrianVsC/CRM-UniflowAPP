@@ -12,6 +12,13 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 
 def generate_guidance():
 
+    '''
+    Esta función retorna la guía de OpenIA sobre cómo actuar con el cliente 
+    según la última fila subida a la base
+    de datos
+    
+    '''
+
     #Cargar datos
     caracteristicas, notas = load_data_gpt()
 

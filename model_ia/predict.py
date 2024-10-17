@@ -3,8 +3,13 @@ import pandas as pd
 from data.load_data import load_data_row
 from model_ia.preprocess import preprocess_data
 
-# Función para predecir la probabilidad de conversión
 def predict_conversion():
+
+    '''
+    Esta función es la que retornará la predicción según la última fila que se ingresó
+    a la base de datos
+
+    '''
 
     prospect_row = load_data_row()    
     
@@ -12,7 +17,6 @@ def predict_conversion():
     model = joblib.load('daily_model.pkl')
 
     # Preprocesar la fila del prospecto
-    # Si necesitas transformar las columnas categóricas a OneHotEncoded, lo haces aquí
     prospect_row_encoded = preprocess_data(prospect_row)
 
     # Hacer la predicción

@@ -31,7 +31,10 @@ def load_data_row():
     data = data.iloc[[-1]]
     return data
 
-def load_data_analisis(tabla: str)-> pd.DataFrame:
+def load_data_analisis():
     supabase = get_supabase_client()
-    datos = supabase.table(tabla).select("*").execute()
-    return pd.DataFrame(datos.data)
+    data1 = supabase.table('customers').select('id','prospect_status','isEnanle','client_status','createdAt').execute()
+    data2 = supabase.table('condominums').select('id','condominum_name','propeties','customerId').execute()
+    customer_df = pd.DataFrame(data1)
+    condominum_df = pd.DataFrame(data2)
+    return customer_df,condominum_df

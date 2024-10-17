@@ -4,7 +4,6 @@ Definimos la función get_supabase_client()
 esto con el objetivo de facilitar la creación del cliente
 
 """
-
 #Importamos las librerías necesarias
 import os
 from supabase import create_client

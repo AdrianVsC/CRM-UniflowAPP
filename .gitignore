@@ -7,3 +7,6 @@ env/
 #Ignoramos cualquier archivo cache o de configuracion
 __pycache__/
 *.pyc
+
+#Ignoramos la carpeta pruebas
+pruebas/

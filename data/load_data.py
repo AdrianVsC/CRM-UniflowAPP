@@ -30,3 +30,8 @@ def load_data_row():
     data = load_data_ml()
     data = data.iloc[[-1]]
     return data
+
+def load_data_analisis(tabla: str)-> pd.DataFrame:
+    supabase = get_supabase_client()
+    response = supabase.table(tabla).select("*").execute()
+    return pd.DataFrame(response.data)

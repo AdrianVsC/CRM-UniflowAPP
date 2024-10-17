@@ -33,8 +33,8 @@ def load_data_row():
 
 def load_data_analisis():
     supabase = get_supabase_client()
-    data1 = supabase.table('customers').select('id','prospect_status','isEnanle','client_status','createdAt').execute()
-    data2 = supabase.table('condominums').select('id','condominum_name','propeties','customerId').execute()
+    data1 = supabase.table('customers').select('id','prospect_status','isEnable','client_status','createdAt').execute()
+    data2 = supabase.table('condominums').select('id','condominum_name','properties','customerId').execute()
     customer_df = pd.DataFrame(data1)
     condominum_df = pd.DataFrame(data2)
     return customer_df,condominum_df

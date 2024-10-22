@@ -38,3 +38,6 @@ def load_data_analisis():
     customer_df = pd.DataFrame(data1)
     condominum_df = pd.DataFrame(data2)
     return customer_df,condominum_df
+
+a = load_data_ml()
+print(a.info())

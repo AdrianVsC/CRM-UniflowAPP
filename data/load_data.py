@@ -101,4 +101,6 @@ def load_data_row():
     # Obtenemos la última fila de datos
     data = data.iloc[[-1]]
 
+
     return data
+

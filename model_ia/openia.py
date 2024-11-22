@@ -47,7 +47,5 @@ def generate_guidance():
 
     respuesta = response.choices[0].message.content.strip()
 
-    return respuesta
-
-
-
+    # return respuesta
+    return print(respuesta)

@@ -30,3 +30,5 @@ def get_supabase_client():
         Client: Cliente de Supabase.
     """
     return supabase_client
+
+
